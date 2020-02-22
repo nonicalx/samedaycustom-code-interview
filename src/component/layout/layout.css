@@ -5,9 +5,15 @@
 .layout {
   display: grid;
   grid-template-columns: 5% 95%;
+  transition: all 5s;
 }
-
+.layout-lg {
+  transition: all 5s;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
 .notifier {
+  display: flex;
   height: 10vh;
   background-color: #ffffff;
   box-shadow: 0px 3px 50px #1877ff1c;
@@ -17,6 +23,7 @@
 .sideBg i {
   color: #ffffff;
   font-size: 24px;
+  cursor: pointer;
 }
 .sideBg div {
   text-align: center;
@@ -28,8 +35,103 @@
 .sideBg img {
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 .sideBg div:last-of-type {
   padding-top: 28vh;
+}
+
+.sideBg div span {
+  display: inline-block;
+  padding-left: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #cee6ff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.selected span {
+  color: #2268d8 !important;
+}
+.selected i {
+  color: #2268d8 !important;
+}
+select img {
+  color: #2268d8 !important;
+}
+
+.sideBg p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sideBg i[class="fa fa-caret-down"] {
+  font-size: 15px;
+  margin-left: 1rem;
+}
+.circleBg {
+  color: blue;
+  padding: 5px 5px;
+  background-color: #cee6ff;
+  border-radius: 50%;
+}
+
+.options {
+  display: none;
+  transition: linear 0.3s;
+}
+
+.show {
+  display: block;
+}
+
+section div {
+  padding: 0 !important;
+  text-align: left !important;
+  padding-left: 2rem !important;
+  color: #ffffff;
+}
+
+.logo {
+  width: 15vw !important;
+  height: 7vh !important;
+  object-fit: contain !important;
+}
+
+.notifier img {
+  height: 24px;
+  width: 24px;
+  /* padding-right: 
+  padding-left:  */
+}
+.notifier div:first-of-type {
+  padding-right: 25%;
+}
+.notifier div {
+  display: flex;
+  align-self: center;
+  border-left: 1px solid lightgray;
+}
+.notifier span {
+  font-size: 14px;
+  margin-left: 1rem;
+  line-height: 25px;
+}
+
+.avatar {
+  width: 6vh !important;
+  height: 6vh !important;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid #196bd8;
+  border-radius: 50%;
 }

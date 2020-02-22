@@ -4,7 +4,7 @@ import SideBar from './sideBar'
 import Notifier from './notificationBar'
 export default function layout(props) {
     return (
-        <div className="layout">
+        <div id="layout" className="layout">
             <div>
                 <SideBar />
             </div>

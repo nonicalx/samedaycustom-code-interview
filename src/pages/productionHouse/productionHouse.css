@@ -1,0 +1,53 @@
+.catBtn {
+  background: #007bff;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.title {
+  font: Bold 30px/39px Helvetica Neue;
+  letter-spacing: 0;
+  color: #030303;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+}
+
+.search-bar {
+  background-color: #eeeeee;
+  padding: 6px 1rem;
+  border-radius: 10px;
+}
+.search-bar img {
+  width: 12px;
+  height: 12px;
+}
+
+.main-content-heads {
+  margin-top: 5.5rem !important;
+}
+
+.ids {
+  font-size: 16px;
+  font-family: Helvetica Neue;
+  letter-spacing: 0;
+  color: #000000;
+  opacity: 1;
+  padding-top: 2rem;
+}
+
+.details p {
+  font-size: 14px;
+}
+
+.details {
+  width: 35%;
+}
+
+.details img {
+  height: 58px;
+  object-fit: cover;
+  object-position: center;
+}
