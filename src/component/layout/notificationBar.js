@@ -23,7 +23,7 @@ export default function notificationBar(props) {
                 <i className="fa fa-list"><span>Notifications</span></i>
             </div>
             <div className="pl-4">
-                <img src={avatar} alt="your avatar" className="avatar" /><br /><span style={{ display: "block" }}>Me<i className="fa fa-caret-down"></i></span>
+                <img src={avatar} alt="your avatar" className="avatar" style={{ display: "block" }} /><br /><span style={{ display: "block" }}>Me<i className="fa fa-caret-down"></i></span>
             </div>
         </div>
     )

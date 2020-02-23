@@ -14,6 +14,7 @@
 }
 .notifier {
   display: flex;
+  overflow: hidden;
   height: 10vh;
   background-color: #ffffff;
   box-shadow: 0px 3px 50px #1877ff1c;

@@ -15,13 +15,13 @@ const SideBar = (props) => {
     var [option, setOption] = useState(false)
     console.log(props)
     const hamClick = () => {
+        setOption(false)
         if (ham === false) {
             document.getElementById('layout').classList.add("layout-lg")
 
             setHam(true)
         } else {
             document.getElementById('layout').classList.remove('layout-lg')
-
             setHam(false)
         }
     }
