@@ -1,6 +1,8 @@
 .sideBg {
   background-color: #007bff;
   min-height: 100vh;
+  position: sticky;
+  top: 0;
 }
 .layout {
   display: grid;
@@ -19,6 +21,9 @@
   background-color: #ffffff;
   box-shadow: 0px 3px 50px #1877ff1c;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .sideBg i {
@@ -95,11 +100,12 @@ select img {
   display: block;
 }
 
-section div {
+.sideBg section div {
   padding: 0 !important;
   text-align: left !important;
-  padding-left: 2rem !important;
+  margin-left: 4rem !important;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .logo {
@@ -116,6 +122,7 @@ section div {
 }
 .notifier div:first-of-type {
   padding-right: 25%;
+  border-left: none !important;
 }
 .notifier div {
   display: flex;

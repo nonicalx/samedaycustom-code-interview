@@ -10,6 +10,12 @@
   color: #030303;
 }
 
+.title img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 .search-bar input {
   border: none;
   background: transparent;
@@ -115,4 +121,8 @@ th {
 .save-btn {
   background-color: #d0d0d0;
   color: #ffffff;
+}
+
+tr {
+  cursor: pointer;
 }

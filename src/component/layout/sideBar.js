@@ -35,19 +35,57 @@ const SideBar = (props) => {
         setOption(!option)
     }
 
-
+    const handleOpeningPage = (path) => {
+        props.history.push({ pathname: path })
+    }
 
     useEffect(() => {
 
         switch (props.location.pathname) {
             case "/":
                 if (ham) {
+                    console.log('option', option)
+
                     setOp("lg")
                     document.getElementById('time-left').classList.add('selected')
                     break;
+                } else if (ham && option) {
+                    setOp("lg")
+                    document.getElementById('prodH').classList.add('selected')
+                    break
                 } else {
                     setOp("sm")
+                    break
                 }
+            case '/productionhouse':
+                if (ham) {
+                    setOp("lg")
+                    document.getElementById('time-left').classList.add('selected')
+                    break;
+                } else if (ham && option) {
+                    setOp("lg")
+                    document.getElementById('time-left').classList.remove('selected')
+                    document.getElementById('prodH').classList.add('selected')
+                    break
+                } else {
+                    setOp("sm")
+                    break
+                }
+            case '/product':
+                if (ham) {
+                    setOp("lg")
+                    document.getElementById('time-left').classList.add('selected')
+                    break;
+                } else if (ham && option || option) {
+                    setOp("lg")
+                    document.getElementById('time-left').classList.remove('selected')
+                    document.getElementById('prodH').classList.add('selected')
+                    break
+                } else {
+                    setOp("sm")
+                    break
+                }
+
 
             default:
                 break;
@@ -62,11 +100,11 @@ const SideBar = (props) => {
             <div id="dashboard" className={`mt-4 ${ham ? 'text-left pl-3' : ''}`}><img src={dash} onClick={initialClick} />{ham ? <span>Dashboard</span> : <></>}</div>
             <div id="time-left" className={`mt-4 ${ham ? 'text-left pl-3' : ''}`}><img src={op === "sm" || op === "lg" ? timerBlue : timer} onClick={initialClick} className={op === "sm" ? 'circleBg' : ''} />{ham ? <span onClick={handleDrop}>Operations<i className="fa fa-caret-down"></i></span> : <></>}</div>
             <section className={option ? "show" : "options"}>
-                <div>Orders</div>
-                <div>Production House</div>
-                <div>Bids</div>
-                <div>Promotiion / Discount</div>
-                <div>Out Sourcing</div>
+                <div className="py-1">Orders</div>
+                <div onClick={() => { handleOpeningPage('/productionhouse') }} id="prodH" className="py-1">Production House</div>
+                <div className="py-1">Bids</div>
+                <div className="py-1">Promotiion / Discount</div>
+                <div className="py-1">Out Sourcing</div>
             </section>
             <div id="file" className={`mt-4 ${ham ? 'text-left pl-3' : ''}`}><img src={file} onClick={initialClick} />{ham ? <span>Records</span> : <></>}</div>
             <div id="cart" className={`mt-4 ${ham ? 'text-left pl-3' : ''}`}><img src={cart} onClick={initialClick} />{ham ? <span>Supply Store</span> : <></>}</div>
